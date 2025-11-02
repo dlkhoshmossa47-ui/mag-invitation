@@ -18,7 +18,11 @@ body{margin:0;background: linear-gradient(180deg, var(--soft-blue), #ffffff);
   border-radius:18px;box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(11,58,122,.1);z-index:1}
 .flap{position:absolute;left:0;right:0;top:0;height:56%;background:linear-gradient(180deg,#c0d7ff 0%,#a9c7ff 100%);
   transform-origin:top;transition:transform .8s cubic-bezier(.2,.8,.2,1);border-top-left-radius:18px;border-top-right-radius:18px;border-bottom:1px solid rgba(11,58,122,.15);z-index:3}
-.card{position:absolute;inset:16px;border-radius:14px;background:var(--card);transform:translateY(28%) scale(.96);
+.card{
+  position: relative;   /* بدل absolute */
+  inset: auto;          /* إلغاء inset */
+  margin: 16px;         /* بديل بسيط لـ inset */
+}
   transition:transform .8s cubic-bezier(.2,.8,.2,1), box-shadow .8s;box-shadow:0 6px 22px rgba(0,0,0,.08);overflow:hidden;z-index:2}
 .card::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 300px at 50% -10%, rgba(11,58,122,.12), transparent 60%);pointer-events:none}
 .card-inner{padding:28px;height:100%;overflow:auto;opacity:0;transition:opacity .45s ease}

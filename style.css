@@ -32,8 +32,6 @@ ul.details li{margin:6px 0}
 .hint{position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);color:#355b9f;font-weight:600;font-size:14px;opacity:.85;display:flex;gap:10px}
 #open-toggle{display:none}
 /* Closed state */
-#open-toggle:not(:checked) ~ .envelope .card{transform:translateY(30%) scale(.96)}
-#open-toggle:not(:checked) ~ .envelope .card .card-inner{opacity:0;pointer-events:none}
 /* Open state */
 #open-toggle:checked ~ .envelope .flap{transform:rotateX(-180deg)}
 #open-toggle:checked ~ .envelope .card{transform:translateY(0) scale(1);box-shadow:0 16px 36px rgba(2,19,54,.25)}
